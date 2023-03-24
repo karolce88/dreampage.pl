@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kufam", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #232323;
+}
+
+h1.company-name {
+  margin-bottom: 0.5em;
+  font-size: 3rem;
+  color: #d6c78e;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
