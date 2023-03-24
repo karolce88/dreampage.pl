@@ -1,3 +1,10 @@
+/*!
+* Hamburgers
+* @description Tasty CSS-animated hamburgers
+* @author Jonathan Suh @jonsuh
+* @site https://jonsuh.com/hamburgers
+* @link https://github.com/jonsuh/hamburgers
+*/
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -68,41 +75,34 @@
   bottom: -10px;
 }
 
-.hamburger--emphatic {
-  overflow: hidden;
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.hamburger--emphatic .hamburger-inner {
-  transition: background-color 0.125s 0.175s ease-in;
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
 }
 
-.hamburger--emphatic .hamburger-inner::before {
-  left: 0;
-  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in;
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.hamburger--emphatic .hamburger-inner::after {
-  top: 10px;
-  right: 0;
-  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in;
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.hamburger--emphatic.is-active .hamburger-inner {
-  transition-delay: 0s;
-  transition-timing-function: ease-out;
-  background-color: transparent !important;
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
 
-.hamburger--emphatic.is-active .hamburger-inner::before {
-  left: -80px;
-  top: -80px;
-  transform: translate3d(80px, 80px, 0) rotate(45deg);
-  transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.hamburger--emphatic.is-active .hamburger-inner::after {
-  right: -80px;
-  top: -80px;
-  transform: translate3d(-80px, 80px, 0) rotate(-45deg);
-  transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}/*# sourceMappingURL=hamburger.css.map */t 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
 }/*# sourceMappingURL=hamburger.css.map */
