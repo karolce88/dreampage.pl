@@ -9,91 +9,239 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
     <header class="header">
         <button class="hamburger hamburger--spin" type="button">
             <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
-
         <nav class="nav nav-mobile">
             <a class="nav__link" href="#aboutme">O mnie</a>
             <a class="nav__link" href="#offer">Oferta</a>
+            <a class="nav__link" href="#portfolio">Portfolio</a>
             <a class="nav__link" href="#contact">Kontakt</a>
         </nav>
         <nav class="nav nav-desktop">
             <a class="nav__link" href="#aboutme">O mnie</a>
             <a class="nav__link" href="#offer">Oferta</a>
+            <a class="nav__link" href="#portfolio">Portfolio</a>
             <a class="nav__link" href="#contact">Kontakt</a>
         </nav>
-
         <div class="header__text">
             <h1 class="company-name">Nowoczesne strony internetowe</h1>
-            <p>Wasze strony tworzę w najnowszych tachnologiach HTML5, CSS3 i JavaScript ES6. <br>Budowane strony są
-                responsywne, to znaczy że są dopasowane do każdego urządzenia (smarftony, tablety, laptopy i duże
-                monitory).</p>
+            <p>Strony budowane są wedłuch najnowszych trendów designerskich.</p>
+            <p>Każda strona jest responsywna. To znaczy że jest dopasowana do urządzeń mobilnych, laptopów i dużych
+                monitorów.</p>
         </div>
-
         <div class="header__img">
             <div class="header__shadow"></div>
             <div class="header__logo"><img class="header__logo-position" src="img/logo-dp-studio.png"
                     alt="Logo dreampage studio"></div>
         </div>
-
-        <a href="#cards">
+        <a href="#aboutme">
             <div class="header__arrow">
                 <img class="header__arrow-icon" src="img/arrow-down.svg" alt="">
             </div>
         </a>
-
         <img class="header__bg-icon-one" src="img/monitor.svg" alt="">
         <img class="header__bg-icon-two" src="img/monitor.svg" alt="">
     </header>
 
     <main class="main">
-
-        <section class="cards" id="cards">
+        <section class="cards" id="aboutme">
             <div class="wrapper">
-
+                <h2 class="section-title">trochę o <span>mnie</span></h2>
                 <div class="cards__box">
-
                     <div class="cards__card cards__card--one">
                         <img src="img/trending-up.svg" alt="">
                         <h3>szybka realizacja</h3>
-                        <p>"Czas to pieniądz", a więc szybkośc działania to dla mnie priorytet.</p>
-
+                        <p>"Czas to pieniądz", a więc szybkośc wykonania to priorytet.</p>
                     </div>
-
                     <div class="cards__card cards__card--two">
                         <img src="img/award.svg" alt="">
                         <h3>wysoka jakość</h3>
                         <p>Zoptymalizowany kod źródłowy, przygotowany pod SEO, najnowsze technologie.</p>
-
                     </div>
-
                     <div class="cards__card cards__card--three">
                         <img src="img/globe.svg" alt="">
                         <h3>niskie koszty</h3>
                         <p>Konkurencyjne ceny tworzenia strony i niskie koszty utrzymania strony w sieci.</p>
-
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="wrapper">
+            <section class="offer" id="offer">
+                <div class="offer__title">
+                    <h2 class="section-title">rodzaje <span>stron</span></h2>
+                </div>
+                <div class="offer__boxes">
+                    <div class="offer__box">
+                        <img src="img/imac-small.png" alt="Responsywne strony, dopasowane do każdego rodzaju urządzenia"
+                            class="offer__box-img">
+                        <h3 class="offer__box-title">Responsywne strony</h3>
+                        <p class="offer__box-text">Strony dopasowane do każdego rodzaju urządzenia</p>
+                        <p class="offer__box-text">Wyświetlają się poprawnie na każdej rozdzielczości</p>
+                        <a href="#" class="offer__box-link">czytaj więcej...</a>
+                    </div>
+                    <div class="offer__box">
+                        <img src="img/laptop-g533d7fd7f_640.jpg"
+                            alt="Responsywne strony, dopasowane do każdego rodzaju urządzenia" class="offer__box-img">
+                        <h3 class="offer__box-title"></h3>
+                        <p class="offer__box-text">Strony dopasowane do każdego rodzaju urządzenia</p>
+                        <p class="offer__box-text">Wyświetlają się poprawnie na każdej rozdzielczości</p>
+                        <a href="#" class="offer__box-link">czytaj więcej...</a>
+                    </div>
+                    <div class="offer__box">
+                        <img src="img/iphone-gec16b3fc3_640.jpg"
+                            alt="Responsywne strony, dopasowane do każdego rodzaju urządzenia" class="offer__box-img">
+                        <h3 class="offer__box-title">Responsywne strony</h3>
+                        <p class="offer__box-text">Strony dopasowane do każdego rodzaju urządzenia</p>
+                        <p class="offer__box-text">Wyświetlają się poprawnie na każdej rozdzielczości</p>
+                        <a href="#" class="offer__box-link">czytaj więcej...</a>
+                    </div>
+                </div>
+                <img class="offer__bg-icon offer__bg-icon--three" src="img/monitor.svg" alt="">
+                <img class="offer__bg-icon offer__bg-icon--four" src="img/monitor.svg" alt="">
+                <img class="offer__bg-icon offer__bg-icon--one" src="img/shopping-bag.svg" alt="">
+                <img class="offer__bg-icon offer__bg-icon--two" src="img/shopping-bag.svg" alt="">
+            </section>
+        </div>
+
+        <section class="price" id="price">
+            <div class="wrapper">
+                <h2 class="section-title">oferta <span>cenowa</span></h2>
+
+                <div class="price__box">
+                    <img src="img/globe.svg" alt="" class="price__item price__item-icon">
+                    <div class="price__item price__item-name">
+                        <h3>Wizytówka w sieci</h3>
+                    </div>
+                    <div class="price__item price__item-details">
+                        <p><b>Opis:</b></p>
+                        <p>-krótki opis -dane kontaktowe -logo firmy (lub inna grafika)</p>
+                    </div>
+                    <div class="price__item price__item-term">
+                        <p><b>Termin wykonania:</b></p>
+                        <p>do 3 dni roboczych</p>
+                    </div>
+                    <div class="price__item price__item-money">
+                        <img src="img/dollar-sign.svg" alt="">
+                        <p><b>Cena:</b></p>
+                        <p>390zł</p>
+                    </div>
+                </div>
+                <div class="price__box">
+                    <img src="img/globe.svg" alt="" class="price__item price__item-icon cta">
+                    <div class="price__item price__item-name">
+                        <h3>Strona typu one page</h3>
+                    </div>
+                    <div class="price__item price__item-details">
+                        <p><b>Opis:</b></p>
+                        <p>Strona typu "one page", składająca się z 6 zakładek: "o nas", "oferta", "kontakt" + pozostałe
+                            (wg. potrzeby).</p>
+                    </div>
+                    <div class="price__item price__item-term">
+                        <p><b>Termin wykonania:</b></p>
+                        <p>do 8 dni roboczych</p>
+                    </div>
+                    <div class="price__item price__item-money">
+                        <img src="img/dollar-sign.svg" alt="">
+                        <p><b>Cena:</b></p>
+                        <p>890zł</p>
+                    </div>
+                </div>
+                <div class="price__box">
+                    <img src="img/globe.svg" alt="" class="price__item price__item-icon">
+                    <div class="price__item price__item-name">
+                        <h3>Landing page</h3>
+                    </div>
+                    <div class="price__item price__item-details">
+                        <p><b>Opis:</b></p>
+                        <p>Strona reklamowa konkretnego produktu lub usługi.</p>
+                    </div>
+                    <div class="price__item price__item-term">
+                        <p><b>Termin wykonania:</b></p>
+                        <p>do 14 dni roboczych</p>
+                    </div>
+                    <div class="price__item price__item-money">
+                        <img src="img/dollar-sign.svg" alt="">
+                        <p><b>Cena:</b></p>
+                        <p>1290zł</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="discount">
+            <div class="wrapper discount__wrapper">
+                <div class="discount__text">
+                    <p>Posiadasz kod rabatowy?</p>
+                </div>
+                <div class="discount__form">
+                    <input type="text">
+                    <button>Wyślij</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="wrapper portfolio__wrapper">
+                <h2 class="section-title">realizacje <span>portfolio</span></h2>
+                <p class="portfolio__text">Podstrona w budowie</p>
+                <div class="portfolio__box">
 
                 </div>
+            </div>
+        </section>
 
+        <section>
+            <div class="opinions">
+                <h2 class="section-title">opinie <span>klientów</span></h2>
+                <p class="opinions__text">Podstrona w budowie</p>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="wrapper">
+                <h2 class="section-title">szybki <span>kontakt</span></h2>
+
+                <form class="contact__form">
+                    <div class="contact__form-box">
+                        <label for="name">Twoje imię:</label>
+                        <input type="text" id="name">
+                    </div>
+
+                    <div class="contact__form-box">
+                        <label for="mail">Twój e-mail:</label>
+                        <input type="text" id="mail">
+                    </div>
+
+                    <div class="contact__form-box">
+                        <label for="msg">Wiadomość:</label>
+                        <textarea id="msg" cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit" class="contact__form-btn">Wyslij</button>
+
+                </form>
             </div>
         </section>
 
     </main>
 
     <footer>
-        <p class="footer__bottom-text"> &copy; <span class="footer__year"> dreampage.pl - studio</span></p>
+        <div class="footer__box">
+            <p class="footer__text-item"> &copy; <p class="footer__year"> dreampage.pl - studio</p>
+        </div>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 

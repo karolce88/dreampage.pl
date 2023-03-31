@@ -1,4 +1,12 @@
 @media (min-width: 992px) {
+	.section-title {
+		font-size: 4.8rem;
+
+		&::before {
+			height: 4px;
+		}
+	}
+
 	h1.company-name {
 		font-size: 6rem;
 	}
@@ -21,7 +29,7 @@
 		}
 
 		&__img {
-			background-image: url('../img/heroimg-big.jpg');
+			background-image: url('../img/hero-img.png');
 			grid-row: 1/4;
 			grid-column: 2/3;
 		}
@@ -74,7 +82,7 @@
 			align-items: flex-end;
 			width: 100%;
 			height: auto;
-            padding: 15px 50px 0 0;
+			padding: 15px 50px 0 0;
 
 			&-position {
 				width: 300px;
