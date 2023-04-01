@@ -18,7 +18,7 @@ body {
 	font-family: 'Kufam', sans-serif;
 	font-size: 1.6rem;
 	color: $white;
-	background-color: $dark;
+	background-color: $darker;
 }
 
 h1.company-name {
@@ -32,6 +32,8 @@ h1.company-name {
 	max-width: 1200px;
 	width: 100%;
 }
+
+
 
 .section-title {
 	position: relative;
@@ -196,15 +198,27 @@ h1.company-name {
 // main
 
 .cards {
-	background-color: $darker;
+	background-color: $dark;
 	padding: 6em 2em;
 	overflow: hidden;
+
+	.aboutmetxt {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 70px;
+
+		&__text {
+			text-align: justify;    
+		}
+	}
+
 
 	&__box {
 		display: grid;
 		grid-template-columns: repeat(9, 1fr);
 		gap: 2em;
-		padding: 6em 2em;
+		padding: 6em 1em;
 	}
 
 	&__card {
@@ -220,7 +234,7 @@ h1.company-name {
 		z-index: 5;
 
 		&:hover {
-			background-color: $darker;
+			background-color: $dark;
 			border: 1px solid $royalblue;
 			z-index: 1;
 		}
@@ -286,17 +300,23 @@ h1.company-name {
 		width: 100%;
 		object-fit: cover;
 		filter: grayscale(80%);
+		border-radius: 4px;
 	}
 
 	&__box-title {
-		margin: 0.3em 0;
+		margin: 0.5em 0;
 		font-size: 2.6rem;
 		color: $royalblue;
 		font-weight: 200;
 	}
 
 	&__box-test {
-		margin-bottom: 0.5em;
+		margin-bottom: 0.9em;
+	}
+
+	&__box-describe {
+		margin-bottom: 0.6em;
+		margin-top: 0.6em;
 	}
 
 	&__box-link {
@@ -322,7 +342,7 @@ h1.company-name {
 
 .price {
 	padding: 6em 2em;
-	background-color: $darker;
+	background-color: $dark;
 
 	&__box {
 		margin: 1em 0;
@@ -330,18 +350,40 @@ h1.company-name {
 		text-align: center;
 		border: 1px solid transparent;
 		border-radius: 8px;
-		background-color: $dark;
+		background-color: $darker;
 		cursor: crosshair;
-		transition: all 0.7s;
+		transition: border 0.9s, background-color .9s, scale .1s;
+		z-index: -5;
 
 		&:hover {
-			background-color: $darker;
+			background-color: $dark;
 			border: 1px solid $royalblue;
+		}
+
+		&:hover .price__item-icon {
+			transform: scale(1.4);
+		}
+
+		&:hover .price__item-money {
+			transform: scale(1.1);
+		}
+
+		&:hover .price__item-name {
+			transform: scale(1.1);
+		}
+
+		&:hover .price__item-details {
+			transform: scale(1.1);
+		}
+
+		&:hover .price__item-term {
+			transform: scale(1.1);
 		}
 	}
 
 	&__item {
 		margin: 1em 0;
+		transition: .6s;
 	}
 
 	&__item-icon {
@@ -353,6 +395,34 @@ h1.company-name {
 		margin-bottom: 1.5em;
 		font-size: 1.8rem;
 		color: $royalblue;
+	}
+
+	&__discount-price {
+		position: relative;
+		
+		&::before {
+			content: '590zł';
+			position: absolute;
+			left: 25px;
+			top: -25px;
+			color: red;
+			transform: rotate(-15deg);
+			text-decoration: line-through;
+		}
+	}
+
+	&__discount-price2 {
+		position: relative;
+		
+		&::before {
+			content: '1190zł';
+			position: absolute;
+			left: 16px;
+			top: -25px;
+			color: red;
+			transform: rotate(-15deg);
+			text-decoration: line-through;
+		}
 	}
 }
 
@@ -401,6 +471,7 @@ h1.company-name {
 .portfolio {
 	padding: 6em 2em;
 	height: 500px;
+	background-color: $dark;
 
 	&__text {
 		text-align: center;
@@ -425,6 +496,7 @@ h1.company-name {
 
 .contact {
 	padding: 6em 2em;
+	background-color: $dark;
 
 	&__form {
 		display: grid;
@@ -455,9 +527,43 @@ h1.company-name {
 
 			&:focus {
 				outline: none;
+				border: 1px solid $royalblue;
 			}
 		}
-	}
+		&:nth-child(1) {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+
+        &:nth-child(2) {
+            grid-column: 1/-1;
+            grid-row: 2/3;
+        }
+
+        &:nth-child(3) {
+            grid-column: 1/-1;
+            grid-row: 3/4;
+        }
+    }
+
+    &__form-btn {
+        grid-column: 1/3;
+        grid-row: 4/5;
+        padding: 1em;
+        border: 1px solid $royalblue;
+        background: none;
+        font-weight: bold;
+        color: $royalblue;
+        cursor: pointer;
+        transition: background-color .3s, color .3s;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            color: $dark;
+            background-color: $royalblue;
+        }
+    }
 }
 
 .footer {
