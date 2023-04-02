@@ -43,6 +43,10 @@ body {
   font-size: 1.6rem;
   color: #eaeaea;
   background-color: #222222;
+  overflow-x: hidden;
+}
+body p {
+  line-height: 23px;
 }
 
 h1.company-name {
@@ -395,12 +399,17 @@ h1.company-name {
   font-size: 4rem;
   font-weight: 200;
 }
+.discount__text P {
+  line-height: 40px;
+  height: auto;
+}
 .discount__form input {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   padding: 1em;
   width: 100%;
   border: 1px solid #0066ff;
   border: 1px solid transparent;
+  font-size: 1.6rem;
 }
 .discount__form button {
   padding: 1em;
@@ -453,14 +462,18 @@ h1.company-name {
   max-width: 100px;
   width: 100%;
   min-width: 100%;
+  min-height: 90px;
+  max-height: 300px;
+  font-size: 1.6rem;
 }
 .contact__form-box input,
 .contact__form-box textarea {
-  padding: 1em 2em;
+  padding: 0.9em 0.9em;
   margin-bottom: 2em;
   width: 100%;
   color: #eaeaea;
   background: none;
+  font-size: 1.6rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .contact__form-box input:focus,
@@ -496,12 +509,41 @@ h1.company-name {
   color: #323232;
   background-color: #0066ff;
 }
+.contact .msg .msg-status {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 5px;
+  width: 270px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.contact .msg .success {
+  display: flex;
+  background-color: #0066ff;
+}
+.contact .msg .error {
+  display: flex;
+  background-color: #A01C35;
+}
 
 .footer {
   margin: 3em;
+  padding: 3em;
+}
+.footer__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 20px 0;
 }
 .footer__text-item {
+  padding: 0 15px;
   font-size: 1.6rem;
 }
 

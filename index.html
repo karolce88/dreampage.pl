@@ -2,6 +2,15 @@
 <html lang="pl">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCM0FGVP3L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SCM0FGVP3L');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +22,7 @@
     <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 
 <body>
     <header class="header">
@@ -219,24 +229,35 @@
             <div class="wrapper">
                 <h2 class="section-title">szybki <span>kontakt</span></h2>
 
-                <form class="contact__form">
+
+
+
+
+                <form class="contact__form" action="mail.php" method="post">
                     <div class="contact__form-box">
-                        <label for="name">Twoje imię:</label>
-                        <input type="text" id="name">
+                        <label for="name">Imię:</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
 
                     <div class="contact__form-box">
-                        <label for="mail">Twój e-mail:</label>
-                        <input type="text" id="mail">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="contact__form-box">
                         <label for="msg">Wiadomość:</label>
-                        <textarea id="msg" cols="30" rows="10"></textarea>
+                        <textarea name="msg" id="msg" required></textarea>
                     </div>
                     <button type="submit" class="contact__form-btn">Wyslij</button>
-
                 </form>
+
+                <div class="msg">
+                    <p class="msg-status"></p>
+                </div>
+
+
+
+
             </div>
         </section>
 
@@ -244,8 +265,9 @@
 
     <footer>
         <div class="footer__box">
-            <p class="footer__text-item"> &copy;
-            <p class="footer__year"> dreampage.pl - studio</p>
+            <p class="footer__text-item">
+                <span class="footer__year"></span> &copy; dreampage.pl - studio stron internetowych
+            </p>
         </div>
     </footer>
 
