@@ -65,4 +65,12 @@
             }
         }
     }
+
+    .portfolio {
+		&__box {
+            min-width: 340px;
+			max-width: 380px;
+            margin: 25px;
+		}
+	}
 }

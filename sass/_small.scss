@@ -54,4 +54,11 @@
 			}
 		}
 	}
+
+	.portfolio {
+		&__box {
+
+			max-width: 580px;
+		}
+	}
 }

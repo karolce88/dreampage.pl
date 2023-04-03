@@ -200,7 +200,7 @@ h1.company-name {
 
 .cards {
   background-color: #323232;
-  padding: 6em 2em;
+  padding: 6em 0em;
   overflow: hidden;
 }
 .cards .aboutmetxt {
@@ -363,6 +363,12 @@ h1.company-name {
   font-size: 1.8rem;
   color: #0066ff;
 }
+.price__box-goal {
+  border: 3px solid #A01C35;
+}
+.price__box-goal:hover {
+  border: 3px solid #0066ff;
+}
 .price__discount-price {
   position: relative;
 }
@@ -426,13 +432,56 @@ h1.company-name {
 }
 
 .portfolio {
-  padding: 6em 2em;
-  height: 500px;
+  padding: 6em 1em;
   background-color: #323232;
 }
+.portfolio__boxes {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.portfolio__box {
+  display: flex;
+  flex-direction: column;
+  min-width: 260px;
+  max-width: 380px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px;
+  margin-bottom: 60px;
+}
+.portfolio__box:hover .portfolio__text {
+  border: 1px solid #0066ff;
+  background-color: #323232;
+}
+.portfolio__img-item {
+  width: 100%;
+  border-radius: 6px;
+}
 .portfolio__text {
+  width: 100%;
   text-align: center;
-  font-size: 1.6rem;
+  padding: 1.5em 0.8em;
+  text-decoration: none;
+  color: #eaeaea;
+  background-color: #222222;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin-top: 5px;
+  transition: all 0.4s;
+}
+.portfolio__text--header {
+  margin-bottom: 1em;
+  text-decoration: none;
+  color: #eaeaea;
+  color: #0066ff;
+}
+.portfolio__text--bold {
+  font-weight: bold;
+}
+.portfolio__link {
+  text-decoration: none;
 }
 
 .opinions {
@@ -537,6 +586,7 @@ h1.company-name {
 }
 .footer__box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -545,6 +595,7 @@ h1.company-name {
 .footer__text-item {
   padding: 0 15px;
   font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 576px) {
@@ -590,6 +641,9 @@ h1.company-name {
     left: -10%;
     width: 12%;
     animation: rotate-right 140s infinite linear;
+  }
+  .portfolio__box {
+    max-width: 580px;
   }
 }
 @media (min-width: 768px) {
@@ -638,6 +692,11 @@ h1.company-name {
   }
   .discount__form input {
     margin-bottom: 0;
+  }
+  .portfolio__box {
+    min-width: 340px;
+    max-width: 380px;
+    margin: 25px;
   }
 }
 @media (min-width: 992px) {
